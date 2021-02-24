@@ -8,6 +8,7 @@ let acoes = {
     caps: caps,
     tracejar: tracejar,
     textoAzul,
+    textoMaior
 
 }
 
@@ -34,5 +35,9 @@ function tracejar(entrada) {
 }
 
 function textoAzul(entrada) {
-    return '<span style="color:blue">' + entrada +'</span>'
+    return '<spam style="color:blue">' + entrada +'</spam>'
+}
+
+function textoMaior(entrada) {
+    return '<spam style= "font-size: 300px">' + entrada +'</spam>'
 }
