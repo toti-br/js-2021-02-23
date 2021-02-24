@@ -1,36 +1,38 @@
 
 
-let form = document.querySelector("#form")
-let formAcao = document.querySelector("#acao")
+let entrada = document.querySelector("#entrada")
 let resultado = document.querySelector("#resultado")
 
-let count = 1;
 
-form.addEventListener('submit', function alterarResultado(event) {
-    event.preventDefault()
+let acoes = {
+    caps: caps,
+    tracejar: tracejar,
+    textoAzul,
 
+}
 
-    let texto = form.querySelector("#entrada").value
-    texto = texto.toUpperCase()
+registrarAcoes()
 
-    let item = document.createElement("li")
-    item.textContent = texto
-    item.dataset.ordem = count
+function registrarAcoes() {
+    let btnAcoes = document.querySelectorAll("#acoes [data-acao]")
 
-    // item.style.backgroundColor = "red"
+    for (let btn of btnAcoes) {
+        btn.addEventListener("click", executarAcao.bind(this, [btn.dataset.acao]))
+    }
+}
 
-    resultado.querySelector("ol").appendChild(item)
+function executarAcao(acao) {
+   resultado.innerHTML =  acoes[acao](entrada.value)
+}
 
-    count++;
-})
+function caps(entrada) {
+    return entrada.toUpperCase()
+}
 
-formAcao.addEventListener('submit', function realizarAcao(event) {
-    event.preventDefault()
+function tracejar(entrada) {
+    return entrada.split('').join('-')
+}
 
-    let numItem = formAcao.querySelector("input").value
-
-    let item = document.querySelector(`[data-ordem="${numItem}"]`)
-    item.style.color = 'blue'
-
-    console.log(numItem)
-})
+function textoAzul(entrada) {
+    return '<span style="color:blue">' + entrada +'</span>'
+}
