@@ -9,8 +9,8 @@ let acoes = {
     tracejar: tracejar,
     sublinhar: sublinhar,
     textoAzul,
+    textoMaior,
     retroStyle,
-
 }
 
 registrarAcoes()
@@ -41,6 +41,10 @@ function sublinhar(entrada) {
 
 function textoAzul(entrada) {
     return '<span style="color:blue">' + entrada +'</span>'
+}
+
+function textoMaior(entrada) {
+    return '<span style= "font-size: 300px">' + entrada +'</span>'
 }
 
 function retroStyle (entrada) {
