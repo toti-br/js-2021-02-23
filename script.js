@@ -9,6 +9,7 @@ let acoes = {
     tracejar: tracejar,
     sublinhar: sublinhar,
     textoAzul,
+    textoItalico,
     textoMaior,
     retroStyle,
 }
@@ -41,6 +42,10 @@ function sublinhar(entrada) {
 
 function textoAzul(entrada) {
     return '<span style="color:blue">' + entrada +'</span>'
+}
+
+function textoItalico(entrada) {
+    return '<span style="font-style: italic;">' + entrada +'</span>'
 }
 
 function textoMaior(entrada) {
