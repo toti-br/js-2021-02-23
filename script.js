@@ -7,6 +7,7 @@ let resultado = document.querySelector("#resultado")
 let acoes = {
     caps: caps,
     tracejar: tracejar,
+    sublinhar: sublinhar,
     textoAzul,
     retroStyle,
 
@@ -32,6 +33,10 @@ function caps(entrada) {
 
 function tracejar(entrada) {
     return entrada.split('').join('-')
+}
+
+function sublinhar(entrada) {
+    return '<u>' + entrada +'</u>' 
 }
 
 function textoAzul(entrada) {
