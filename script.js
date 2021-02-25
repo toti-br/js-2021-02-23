@@ -8,6 +8,7 @@ let acoes = {
     caps: caps,
     tracejar: tracejar,
     textoAzul,
+    tachado,
 
 }
 
@@ -35,4 +36,8 @@ function tracejar(entrada) {
 
 function textoAzul(entrada) {
     return '<span style="color:blue">' + entrada +'</span>'
+}
+
+function tachado(entrada) {
+    return '<span style="text-decoration:line-through; text-decoration-color: red;">' + entrada +'</span>'
 }
