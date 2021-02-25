@@ -7,9 +7,10 @@ let resultado = document.querySelector("#resultado")
 let acoes = {
     caps: caps,
     tracejar: tracejar,
+    sublinhar: sublinhar,
     textoAzul,
-    textoMaior
-
+    textoMaior,
+    retroStyle,
 }
 
 registrarAcoes()
@@ -34,10 +35,22 @@ function tracejar(entrada) {
     return entrada.split('').join('-')
 }
 
+function sublinhar(entrada) {
+    return '<u>' + entrada +'</u>' 
+}
+
 function textoAzul(entrada) {
-    return '<spam style="color:blue">' + entrada +'</spam>'
+    return '<span style="color:blue">' + entrada +'</span>'
 }
 
 function textoMaior(entrada) {
-    return '<spam style= "font-size: 300px">' + entrada +'</spam>'
+    return '<span style= "font-size: 300px">' + entrada +'</span>'
+}
+
+function retroStyle (entrada) {
+    return `<span style="font-family: 'DotGothic16', sans-serif; 
+                        background-color: black;
+                        color: rgb(36, 255, 7);
+                        line-height: 6vw;
+                        font-size: 40px;">` + entrada + '</span>'
 }
