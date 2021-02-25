@@ -9,6 +9,7 @@ let acoes = {
     tracejar: tracejar,
     sublinhar: sublinhar,
     textoAzul,
+    reverse,
     tachado,
     textoItalico,
     textoMaior,
@@ -45,6 +46,13 @@ function textoAzul(entrada) {
     return '<span style="color:blue">' + entrada +'</span>'
 }
 
+
+function reverse(entrada) {
+    let rev = entrada.split('');
+    let textoRev = rev.reverse();
+    let finalTexto = textoRev.join('');
+    return finalTexto;
+}
 
 function tachado(entrada) {
     return '<span style="text-decoration:line-through; text-decoration-color: red;">' + entrada +'</span>'
