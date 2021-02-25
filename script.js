@@ -8,7 +8,7 @@ let acoes = {
     caps: caps,
     tracejar: tracejar,
     textoAzul,
-
+    reverse,
 }
 
 registrarAcoes()
@@ -35,4 +35,11 @@ function tracejar(entrada) {
 
 function textoAzul(entrada) {
     return '<span style="color:blue">' + entrada +'</span>'
+}
+
+function reverse(entrada) {
+    let rev = entrada.split('');
+    let textoRev = rev.reverse();
+    let finalTexto = textoRev.join('');
+    return finalTexto;
 }
