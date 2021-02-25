@@ -8,6 +8,7 @@ let acoes = {
     caps: caps,
     tracejar: tracejar,
     textoAzul,
+    textoItalico,
 
 }
 
@@ -35,4 +36,7 @@ function tracejar(entrada) {
 
 function textoAzul(entrada) {
     return '<span style="color:blue">' + entrada +'</span>'
+}
+function textoItalico(entrada) {
+    return '<span style="font-style: italic;">' + entrada +'</span>'
 }
