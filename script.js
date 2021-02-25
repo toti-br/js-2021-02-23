@@ -9,6 +9,7 @@ let acoes = {
     tracejar: tracejar,
     sublinhar: sublinhar,
     textoAzul,
+    tachado,
     textoItalico,
     textoMaior,
     retroStyle,
@@ -42,6 +43,11 @@ function sublinhar(entrada) {
 
 function textoAzul(entrada) {
     return '<span style="color:blue">' + entrada +'</span>'
+}
+
+
+function tachado(entrada) {
+    return '<span style="text-decoration:line-through; text-decoration-color: red;">' + entrada +'</span>'
 }
 
 function textoItalico(entrada) {
