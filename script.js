@@ -8,7 +8,8 @@ let acoes = {
     caps: caps,
     tracejar: tracejar,
     textoAzul,
-
+    small,
+   
 }
 
 registrarAcoes()
@@ -35,4 +36,8 @@ function tracejar(entrada) {
 
 function textoAzul(entrada) {
     return '<span style="color:blue">' + entrada +'</span>'
+}
+
+function small(entrada) {
+    return entrada.small()
 }
