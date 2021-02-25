@@ -9,6 +9,7 @@ let acoes = {
     tracejar: tracejar,
     sublinhar: sublinhar,
     textoAzul,
+    retroStyle,
 
 }
 
@@ -40,4 +41,12 @@ function sublinhar(entrada) {
 
 function textoAzul(entrada) {
     return '<span style="color:blue">' + entrada +'</span>'
+}
+
+function retroStyle (entrada) {
+    return `<span style="font-family: 'DotGothic16', sans-serif; 
+                        background-color: black;
+                        color: rgb(36, 255, 7);
+                        line-height: 6vw;
+                        font-size: 40px;">` + entrada + '</span>'
 }
