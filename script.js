@@ -10,6 +10,7 @@ let acoes = {
     sublinhar: sublinhar,
     textoAzul,
     textoTraçado: textoTraçado,
+    small,
     reverse,
     tachado,
     textoItalico,
@@ -49,6 +50,10 @@ function textoAzul(entrada) {
 
 function textoTraçado(entrada) {
     return entrada.strike()
+}
+
+function small(entrada) {
+    return entrada.small()
 }
 
 function reverse(entrada) {
