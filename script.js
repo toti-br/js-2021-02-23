@@ -16,6 +16,7 @@ let acoes = {
     textoItalico,
     textoMaior,
     retroStyle,
+    contaLetras,
 }
 
 registrarAcoes()
@@ -81,4 +82,10 @@ function retroStyle (entrada) {
                         color: rgb(36, 255, 7);
                         line-height: 6vw;
                         font-size: 40px;">` + entrada + '</span>'
+}
+
+function contaLetras(entrada) {
+    let texto = entrada.length;
+ 
+    return "O número de letras nesta palavra é " + texto;
 }
